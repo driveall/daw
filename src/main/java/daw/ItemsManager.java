@@ -10,10 +10,10 @@ public class ItemsManager {
         Data d = (Data)SpringSingle.getContext().getBean("data");
         return d.getItems();
     }
-    public List<ItemsTable> getCategoryItemsList(String cat){
+    private List<ItemsTable> getCategoryItemsList(String cat){
         Data d = (Data)SpringSingle.getContext().getBean("data");
         List<ItemsTable> items = d.getItems();
-        List<ItemsTable> catItems = new LinkedList<>();
+        List<ItemsTable> catItems = new LinkedList<ItemsTable>();
         for(ItemsTable i:items){
             if(i.getCat().equals(cat)){
                 catItems.add(i);
@@ -27,7 +27,7 @@ public class ItemsManager {
         List<ItemsTable> bootses = getCategoryItemsList("boots");
         List<ItemsTable> phones = getCategoryItemsList("phone");
         List<ItemsTable> weapons = getCategoryItemsList("hands");
-        List<List<ItemsTable>> ret = new LinkedList<>();
+        List<List<ItemsTable>> ret = new LinkedList<List<ItemsTable>>();
         ret.add(helmets);
         ret.add(armors);
         ret.add(bootses);

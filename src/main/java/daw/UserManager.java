@@ -5,15 +5,12 @@ import db.UsersTable;
 import dao.Data;
 import db.ItemsList;
 import db.ItemsTable;
-import java.io.IOException;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.util.*;
 
 public class UserManager {
 
@@ -62,7 +59,7 @@ public class UserManager {
         return u;
     }
 
-    public void addNewItem(Integer itemID, UsersTable user) {
+    private void addNewItem(Integer itemID, UsersTable user) {
         Data d = (Data)SpringSingle.getContext().getBean("data");
         Gson gson = new Gson();
         String jsonItems = user.getItemsAll();
@@ -91,6 +88,7 @@ public class UserManager {
         try {
             response.sendRedirect("/daw/user");
         } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 
@@ -171,7 +169,7 @@ public class UserManager {
         Data d = (Data)SpringSingle.getContext().getBean("data");
         Gson gson = new Gson();
         List<Integer> items = gson.fromJson(user.getItems(), ItemsList.class).getItemsIDsList();
-        List<ItemsTable> ret = new LinkedList<>();
+        List<ItemsTable> ret = new LinkedList<ItemsTable>();
         for(Integer i:items){
             ret.add(d.getItemByID(i));
         }

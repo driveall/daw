@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ItemsList implements Serializable{
-    private List<Integer> itemsIDsList = new LinkedList<>();
+    private List<Integer> itemsIDsList = new LinkedList<Integer>();
 
     public ItemsList() {
     }
