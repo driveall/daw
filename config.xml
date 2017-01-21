@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" 
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+  
+    <bean id="battle" class="daw.BattleManager" /> 
+    <bean id="items" class="daw.ItemsManager" /> 
+    <bean id="user" class="daw.UserManager" /> 
+    <bean id="buildReg" class="html.BuildReg" />
+    <bean id="buildLog" class="html.BuildLog" />
+    <bean id="buildItems" class="html.BuildItems" />
+    <bean id="buildUser" class="html.BuildUser" />
+    <bean id="buildBattle" class="html.BuildBattle" />
+    <bean id="data" class="dao.Data" />
+    <bean id="iList" class="db.ItemsList" scope="prototype" />
+  
+</beans>

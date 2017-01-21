@@ -1,0 +1,130 @@
+body {
+    background: #F5FFFA;
+    color: black;
+    font-family: Trebuchet MS, Arial, Times New Roman;
+    font-size: 12px;
+    background-image: url("http://i.piccy.info/i9/9cd3f79e1be132a90d84453620f66af3/1484439278/104549/1108419/bg.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+
+.button {
+    background-color: #ccff99;
+    color: #000000;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 1px solid red;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #ccff99;
+}
+
+#batLeft {
+    margin: 10px auto;
+    float: left;
+    width: 20%;
+    height: 98%;
+}
+
+#batCent {
+    margin: 10px auto;
+    width: 60%;
+    height: 98%;
+    font-size: 15px;
+    border: solid black;
+    border-color: #86ffff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+#batRight {
+    margin: 10px auto;
+    float: right;
+    width: 20%;
+    height: 98%;
+}
+
+#userInfo {
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#userTotal {
+    margin: 10px auto;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#buyResult {
+    margin: 10px auto;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#strengthPassValue {
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #ff0000;
+}
+
+#isUserValue {
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #ff0000;
+}
+
+#itemHeadInItems{
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #000000
+}
+
+#table {
+    background: #f8bd93;
+}
+
+#td {
+    background: #f8bd93;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 200px;
+}
+ul li {
+    position: relative;
+    background: #ffcc00;
+}
+li ul {
+    position: absolute;
+    left: 199px;
+    background: #ffcccc;
+    top: 0;
+    display: none;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #663300;
+    padding: 10px;
+    border: 1px solid #000;
+    border-bottom: 0;
+}
+li:hover ul { display: block; }
